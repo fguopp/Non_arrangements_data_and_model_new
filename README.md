@@ -1,0 +1,7 @@
+# Non_arrangements_data_and_model_new
+1. CODE_NON_ARRANGEMENTS.py shows the code to retrieve Non IB Arrangements call volume and application data from SQL Database, and then calculate relevant attributes. In the end, using model calculated by DataRobot, it gives prediction to the next week.
+2. prediction for next 2 weeks.py contains the code to predict the next 2 weeks non IB Arrangements call volume. Since we can predict next week's call volume using CODE_NON_ARRANGEMENTS.py, the code is to put the predicted next week's data into the call volume and recalculate all the relevant attributes, and use DataRobot model to generate non IB Arrangemets call volume 2 weeks later. 
+3. All call volume analysis is similar to the way to analyze the non IB Arrangements call volume. 
+4. code_to_generate_future_data.py gives the analysis to predict call volume using direct mail data, similiar to the above file. Furthurmore, it uses the DataRobot model to predict the next week's call volume, and then use the predicted call volume as inputs to predict call volume 2 weeks furthur, in a recursive way, by using the function outgrow_by_7(). 
+5. loop_function_to_predict_week_by_week.py is simply the function outgrow_by_7(), with a little bit pre-process of dataframe in the first few lines. 
+6. hourly_analysis_of_call_log.py is the code to analyze the hourly distribution of call volume and non IB Arrangements call volume. 
